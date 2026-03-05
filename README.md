@@ -1,18 +1,56 @@
-# Facebook Sentiment Analysis
+# Facebook Sentiment Analysis using NLP
 
-This project performs sentiment analysis on Facebook comments using Natural Language Processing (NLP).
+## Project Overview
+In this project I built a simple sentiment analysis system using Python and Natural Language Processing (NLP).  
+The program reads text reviews from a file and analyzes the sentiment of each sentence.  
+It determines whether the sentiment expressed in the text is positive, negative, or neutral.
 
-The system analyzes text comments and classifies them into:
-- Positive
-- Negative
-- Neutral
+## How the Project Works
+The program reads text data from a file called `kindle.txt`.  
+Then it processes the text using NLP techniques like tokenization, stemming, lemmatization, and POS tagging.  
+After processing the text, the VADER sentiment analysis model from NLTK calculates the sentiment score.
 
-Technologies Used:
-Python, NLTK, Pandas, Scikit-learn
+## Technologies Used
+- Python
+- NLTK
+- NumPy
+- Pandas
+- Matplotlib
 
-Steps:
-1. Load the dataset
-2. Clean and preprocess text
-3. Convert text into numerical features
-4. Train a machine learning model
-5. Predict sentiment of new comments
+## Project Structure
+
+facebook-sentiment-analysis  
+│  
+├── sentiment_analysis.py  
+├── kindle.txt  
+├── requirements.txt  
+└── README.md  
+
+## How to Run the Project
+
+### Install required libraries
+
+pip install -r requirements.txt
+
+### Run the program
+
+python sentiment_analysis.py
+
+## Dataset
+The project uses a text file called `kindle.txt` which contains sample review sentences used for sentiment analysis.
+
+## Output
+The program processes the text and shows:
+- Tokenized sentences and words
+- Stemming results
+- Lemmatization results
+- POS tagging
+- Sentiment score for each sentence
+
+Example Output
+
+Sentence: This product is amazing  
+Scores: {'neg': 0.0, 'neu': 0.34, 'pos': 0.66, 'compound': 0.82}
+
+## Conclusion
+This project demonstrates how Natural Language Processing techniques can be used to analyze text data and identify sentiment in reviews or comments.
